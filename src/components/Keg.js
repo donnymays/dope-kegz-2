@@ -6,8 +6,7 @@ function Keg(props){
     <React.Fragment>
       <div onClick = {() => props.whenKegClicked(props.id)}>
         <h3>{props.name}</h3>
-        <p>{props.pints}</p>
-        <button onClick = {() => props.whenPintPoured(props.pints)}>Pour</button>
+        <p>Pints Left: {props.pints}</p>
         <hr/>
       </div>
     </React.Fragment>
@@ -22,7 +21,6 @@ Keg.propTypes = {
   pints: PropTypes.number,
   id: PropTypes.string,
   whenKegClicked: PropTypes.func,
-  whenPintPoured: PropTypes.func
 }
 
 export default Keg;

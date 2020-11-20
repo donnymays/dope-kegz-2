@@ -64,7 +64,7 @@ class KegControl extends React.Component {
   handlePouringAPint = (kegToPourFrom) => {
     const editedMasterKegList = this.state.masterKegList.filter(keg => keg.id !== this.state.selectedKeg.id).concat(kegToPourFrom);
     kegToPourFrom.pints --;
-    console.log(editedMasterKegList)
+    console.log(kegToPourFrom)
     console.log(kegToPourFrom.pints)
     this.setState({ 
       masterKegList: editedMasterKegList,
