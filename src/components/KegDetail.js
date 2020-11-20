@@ -15,6 +15,14 @@ function KegDetail(props) {
       <button onClick={()=> onClickingDelete(keg.id) }>Keg's Cached!</button>
       <hr/>
     </React.Fragment>
-  )
-  
+  );
 }
+
+KegDetail.propTypes = {
+  keg: PropTypes.object,
+  onPouringAPint: PropTypes.func,
+  onClickingDelete: PropTypes.func,
+  onClickingEdit: PropTypes.func
+};
+
+export default KegDetail;
