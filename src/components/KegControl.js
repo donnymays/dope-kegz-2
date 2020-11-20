@@ -68,7 +68,7 @@ class KegControl extends React.Component {
     console.log(kegToPourFrom.pints)
     this.setState({ 
       masterKegList: editedMasterKegList,
-      selectedKeg: kegToPourFrom
+      selectedKeg: null
     });
   }
 
