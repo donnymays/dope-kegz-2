@@ -62,10 +62,12 @@ class KegControl extends React.Component {
 
   handlePouringAPint = (kegToPourFrom) => {
     const editedMasterKegList = this.state.masterKegList.filter(keg => keg.id !== this.state.selectedKeg.id).concat(kegToPourFrom);
-    if (kegToPourFrom.pints.parseInt > 0) {
+    if (kegToPourFrom.pints > 0) {
+      alert(kegToPourFrom.pints)
       kegToPourFrom.pints --;
     } else {
-      alert('Keg\'s Cached');
+      alert("2" + kegToPourFrom.pints)
+      return;
     }
     this.setState({ 
       masterKegList: editedMasterKegList,
