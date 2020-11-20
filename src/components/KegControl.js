@@ -3,13 +3,18 @@ import EditKegForm from "./EditKegForm";
 import KegDetail from "./KegDetail";
 import KegList from "./KegList";
 import NewKegForm from "./NewKegForm";
+import { v4 } from 'uuid';
 
 class KegControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       formVisibleOnPage: false,
-      masterKegList: [],
+      masterKegList: [
+        {name: "Beer", brand: "Good Beer", price: '85', ABV: '6', pints: 124, id: v4()},
+        {name: "Ale", brand: "Good Ale", price: '75', ABV: '7', pints: 124, id: v4()},
+        {name: "Lager", brand: "Good Lager", price: '80', ABV: '4', pints: 124, id: v4()},
+      ],
       selectedKeg: null,
       editing: false
     };
@@ -21,7 +26,7 @@ class KegControl extends React.Component {
         formVisibleOnPage: false,
         selectedKeg: null,
         editing: false
-      });
+      })
     } else {
       this.setState(prevState => ({
         formVisibleOnPage: !prevState.formVisibleOnPage
@@ -36,7 +41,7 @@ class KegControl extends React.Component {
   }
 
   handleChangingSelectedKeg = (id) => {
-    const selectedKeg = this.state.masterKegList.filter(keg => keg.id ===id)[0];
+    const selectedKeg = this.state.masterKegList.filter(keg => keg.id === id)[0];
     this.setState({selectedKeg: selectedKeg});
   }
 

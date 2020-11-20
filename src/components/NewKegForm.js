@@ -23,4 +23,3 @@ NewKegForm.propTypes = {
 };
 
 export default NewKegForm;
-

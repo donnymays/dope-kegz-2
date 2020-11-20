@@ -20,8 +20,8 @@ function KegDetail(props) {
       <p>${keg.price} | %{keg.abv}</p>
       <p><em>Pints Left: {keg.pints}</em></p>
       {pourAPintButton}
-      <button onClick={ props.onClickingEdit }>Edit Deets</button> 
-      <button onClick={()=> props.onClickingDelete(keg.id) }>Keg's Cached!</button>
+      <button onClick={ onClickingEdit }>Edit Deets</button> 
+      <button onClick={()=> onClickingDelete(keg.id) }>Keg's Cached!</button>
       <hr/>
     </React.Fragment>
   );
