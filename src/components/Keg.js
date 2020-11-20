@@ -16,8 +16,8 @@ function Keg(props){
 Keg.propTypes = {
   name: PropTypes.string,
   brand: PropTypes.string,
-  price: PropTypes.number,
-  abv: PropTypes.number,
+  price: PropTypes.string,
+  abv: PropTypes.string,
   pints: PropTypes.number,
   id: PropTypes.string
 }
