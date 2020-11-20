@@ -24,7 +24,7 @@ function ReusableForm(props) {
         <input 
           type='number'
           name='pints'
-          placeholder='No. of Pints' />
+          placeholder='No. of Pints (124 for normal keg)' />
           <button type='submit'>{props.buttonText}</button>
       </form>
     </React.Fragment>
