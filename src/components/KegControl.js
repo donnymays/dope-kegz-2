@@ -1,12 +1,12 @@
 import React from "react";
 import EditKegForm from "./EditKegForm";
-import Keg from "./Keg";
 import KegDetail from "./KegDetail";
 import KegList from "./KegList";
 import NewKegForm from "./NewKegForm";
 
 class KegControl extends React.Component {
   constructor(props) {
+    super(props);
     this.state = {
       formVisibleOnPage: false,
       masterKegList: [],
@@ -60,9 +60,9 @@ class KegControl extends React.Component {
     });
   }
 
-  handlePouringAPint = (id) => {
+  handlePouringAPint = (kegToPourFrom) => {
     const editedMasterKegList = this.state.masterKegList.filter(keg => keg.id !== this.state.selectedKeg.id).concat(kegToPourFrom);
-    if (editedMasterKegList[id].pints > 0) {
+    if (kegToPourFrom.pints.parseInt > 0) {
       kegToPourFrom.pints --;
     } else {
       alert('Keg\'s Cached');
@@ -70,7 +70,7 @@ class KegControl extends React.Component {
     this.setState({ 
       masterKegList: editedMasterKegList,
       editing: false,
-      selectedKeg: selectedKeg
+      selectedKeg: kegToPourFrom
     });
   }
 
