@@ -19,7 +19,6 @@ function Keg(props){
         <h3>{props.name}</h3>
         {/* {typeImage} */}
         <p>Pints Left: {props.pints}</p>
-        <hr/>
       </div>
     </React.Fragment>
   );

@@ -2,7 +2,11 @@ import React from "react";
 
 function Header() {
   return (
-    <h1>Dope Kegz</h1>
+    <header>
+      <h1>Dope Kegz</h1>
+      <p>keg management system</p>
+    </header>
+    
   );
 }
 
