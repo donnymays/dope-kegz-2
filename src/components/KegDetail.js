@@ -10,6 +10,7 @@ function KegDetail(props) {
       pourAPintButton = <button onClick={() => onPouringAPint({
       name: keg.name,
       brand: keg.brand,
+      type: keg.type,
       price: keg.price,
       abv: keg.abv,
       pints: pintsRemaning,
