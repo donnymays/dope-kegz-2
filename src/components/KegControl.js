@@ -14,7 +14,7 @@ class KegControl extends React.Component {
       const action = a.deselectKeg();
       dispatch(action);
     } else {
-      const action = a.toggleEditForm();
+      const action = a.toggleNewForm();
       dispatch(action);
     };
   };
