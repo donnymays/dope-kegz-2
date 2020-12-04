@@ -8,23 +8,28 @@ function ReusableForm(props) {
         <input 
           type='text'
           name='name'
-          placeholder='Name' />
+          placeholder='Name'
+          defaultValue = {props.name ? props.name : ""} />
         <input 
           type='text'
           name='brand'
-          placeholder='Brand' />
+          placeholder='Brand'
+          defaultValue = {props.brand ? props.brand : ""} />
         <input 
           type='text'
           name='price'
-          placeholder='Price' />
+          placeholder='Price'
+          defaultValue = {props.price ? props.price : ""} />
         <input 
           type='text'
           name='abv'
-          placeholder='ABV %' />
+          placeholder='ABV %'
+          defaultValue = {props.abv ? props.abv : ""} />
         <input 
           type='number'
           name='pints'
-          placeholder='No. of Pints (124 for normal keg)' />
+          placeholder='No. of Pints (124 for normal keg)'
+          defaultValue = {props.pints ? props.pints : ""} />
           <button type='submit'>{props.buttonText}</button>
       </form>
     </React.Fragment>

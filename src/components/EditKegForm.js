@@ -2,6 +2,7 @@ import React from "react";
 import ReusableForm from "./ReusableForm";
 import PropTypes from "prop-types";
 
+
 function EditKegForm (props) {
   const { keg, onEditKeg } = props;
   function handleEditKegFormSubmission(event) {
@@ -12,6 +13,12 @@ function EditKegForm (props) {
   return (
     <React.Fragment>
       <ReusableForm
+        name={keg.name}
+        brand={keg.brand}
+        price={keg.price}
+        abv={keg.abv}
+        pints={keg.pints}
+        id={keg.id}
         formSubmissionHandler={handleEditKegFormSubmission}
         buttonText="Update Deets" />
     </React.Fragment>
