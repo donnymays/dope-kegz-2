@@ -19,11 +19,23 @@ function KegDetail(props) {
   } else {
     pourAPintButton = "Kegz Cached!"
   }
+
+  let typeImage;
+  if (props.type === 'paleAle') {
+    typeImage = <img src= 'images/pale-ale.png' alt=''/>
+  } else if (props.type === 'lager') {
+    typeImage = <img src= 'images/lager.png' alt=''/>
+  } else if (props.type === 'amber') {
+    typeImage = <img src= 'images/amber.png' alt=''/>
+  } else {
+    typeImage = <img src= 'images/stout.png' alt=''/>
+  };
   
   return (
     <React.Fragment>
       <h1>Keg Deets</h1>
       <h3>{keg.name} - {keg.brand}</h3>
+      {typeImage}
       <p>${keg.price} | %{keg.abv}</p>
       <p><em>Pints Left: {keg.pints}</em></p>
       {pourAPintButton}

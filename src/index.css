@@ -17,6 +17,11 @@ code {
     monospace;
 }
 
+img {
+  width: 25%;
+  height: auto;
+}
+
 header {
   text-align: center;
   background-color: #ccc;

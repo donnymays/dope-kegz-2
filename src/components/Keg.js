@@ -2,22 +2,23 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function Keg(props){
-  // let typeImage;
-  // if (props.types === 'paleAle') {
-  //   typeImage = '<div>Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>'
-  // } else if (props.types === 'lager') {
-  //   typeImage = '<div>Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>';
-  // } else if (props.types === 'amber') {
-  //   typeImage = '<div>Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>';
-  // } else {
-  //   typeImage = '<div>Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>';
-  // }
   
+  let typeImage;
+    if (props.type === 'paleAle') {
+      typeImage = <img src= 'images/pale-ale.png' alt=''/>
+    } else if (props.type === 'lager') {
+      typeImage = <img src= 'images/lager.png' alt=''/>
+    } else if (props.type === 'amber') {
+      typeImage = <img src= 'images/amber.png' alt=''/>
+    } else if (props.type === 'stout') {
+      typeImage = <img src= 'images/stout.png' alt=''/>
+    };  
+
   return (
     <React.Fragment>
       <div className='keg' onClick = {() => props.whenKegClicked(props.id)}>
         <h3>{props.name}</h3>
-        {/* {typeImage} */}
+        {typeImage}
         <p>Pints Left: {props.pints}</p>
       </div>
     </React.Fragment>

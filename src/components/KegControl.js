@@ -25,6 +25,7 @@ class KegControl extends React.Component {
     dispatch(action);
     const action2 = a.toggleNewForm();
     dispatch(action2);
+    console.log(newKeg.type)
   }
 
   handleChangingSelectedKeg = (id) => {
@@ -52,6 +53,7 @@ class KegControl extends React.Component {
     dispatch(a.addKeg(kegToEdit));
     dispatch(a.deselectKeg());
     dispatch(a.toggleEditForm());
+    console.log(kegToEdit.type)
   }
 
   handlePouringAPint = (kegToPourFrom) => {
