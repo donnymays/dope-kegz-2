@@ -11,10 +11,10 @@ describe ('dope kegz actions', () => {
     abv: 5,
     pints: 124,
     id: 1
-  }
+  };
 
-  it('addKeg should create ADD-KEG action', () => {
-    expect (actions.addKeg(testKeg))
+  it('addKeg should create ADD_KEG action', () => {
+    expect(actions.addKeg(testKeg))
       .toEqual({
       type: a.ADD_KEG,
       name: "testName",
@@ -23,7 +23,15 @@ describe ('dope kegz actions', () => {
       abv: 5,
       pints: 124,
       id: 1
-    })
-  })
+    });
+  });
+
+  it('deleteKeg should create DELETE_KEG action', () => {
+    expect(actions.deleteKeg(1)).toEqual({
+      type: a.DELETE_KEG,
+      id: 1
+    });
+  });
+  
 })
 
