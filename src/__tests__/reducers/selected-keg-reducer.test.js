@@ -1,5 +1,4 @@
 import selectedKegReducer from '../../reducers/selected-keg-reducer';
-import * as a from './../../actions/ActionTypes';
 import * as actions from './../../actions/index';
 
 describe('selectedKegReducer', () => {
