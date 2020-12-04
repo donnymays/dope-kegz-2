@@ -1,6 +1,6 @@
 import rootReducer from '../../reducers/index';
 import { createStore} from 'redux';
-import formVisibleReducer from '../../reducers/form-visible-reducer';
+import formVisibleReducer from '../../reducers/edit-form-visible-reducer';
 import kegListReducer from '../../reducers/keg-list-reducer';
 import selectedKegReducer from '../../reducers/selected-keg-reducer';
 import * as a from '../../actions/ActionTypes';
