@@ -36,7 +36,7 @@ function KegDetail(props) {
       <h1>Keg Deets</h1>
       <h3>{keg.name} - {keg.brand}</h3>
       {typeImage}
-      <p>${keg.price} | %{keg.abv}</p>
+      <p>${keg.price} | ABV: {keg.abv}%</p>
       <p><em>Pints Left: {keg.pints}</em></p>
       {pourAPintButton}
       <button onClick={ onClickingEdit }>Edit Deets</button> 

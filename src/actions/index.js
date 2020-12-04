@@ -13,7 +13,7 @@ export const addKeg = (keg) => {
   }
 }
 
-export const deleteKeg = id => ({
+export const deleteKeg = (id) => ({
   type: a.DELETE_KEG,
   id
 });

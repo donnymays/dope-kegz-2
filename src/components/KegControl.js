@@ -39,6 +39,8 @@ class KegControl extends React.Component {
    const { dispatch } = this.props;
    const action = a.deleteKeg(id);
    dispatch(action);
+   const action2 = a.deselectKeg(id);
+   dispatch(action2);
   }
   
 
