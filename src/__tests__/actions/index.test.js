@@ -39,5 +39,17 @@ describe ('dope kegz actions', () => {
     });
   });
 
+  it('selectKeg should create SELECT_KEG action', () => {
+    expect(actions.selectKeg(testKeg)).toEqual({
+      type: a.SELECT_KEG,
+      name: "testName",
+      brand: "testBrand",
+      price: 100,
+      abv: 5,
+      pints: 124,
+      id: 1
+    })
+  })
+
 })
 
