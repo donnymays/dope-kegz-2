@@ -51,5 +51,11 @@ describe ('dope kegz actions', () => {
     })
   })
 
-})
+  it('deselectKeg should create DESELCT_KEG action', () => {
+    expect(actions.deselectKeg()).toEqual({
+      type: a.DESELECT_KEG
+    });
+  });
+
+});
 
