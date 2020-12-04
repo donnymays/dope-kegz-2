@@ -4,15 +4,23 @@ import PropTypes from "prop-types";
 function KegDetail(props) {
   const { keg, onClickingDelete, onPouringAPint, onClickingEdit } = props;
   let pintsRemaning = keg.pints - 1;
-  let pourAPintButton = <button onClick={() => onPouringAPint({
-    name: keg.name,
-    brand: keg.brand,
-    price: keg.price,
-    abv: keg.abv,
-    pints: pintsRemaning,
-    id: keg.id
-  })}>Pour!</button>
+  let pourAPintButton;
+  if (keg.pints > 0){
+     pourAPintButton = <button onClick={() => onPouringAPint({
+      name: keg.name,
+      brand: keg.brand,
+      price: keg.price,
+      abv: keg.abv,
+      pints: pintsRemaning,
+      id: keg.id
+    })}>Pour!</button>
+  } else {
+    pourAPintButton = "Kegz Cached!"
+  }
   
+
+
+
   return (
     <React.Fragment>
       <h1>Keg Deets</h1>

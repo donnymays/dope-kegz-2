@@ -11,7 +11,7 @@ class KegControl extends React.Component {
     this.state = {
       formVisibleOnPage: false,
       masterKegList: [
-        {name: "Beer", brand: "Good Beer", price: '85', ABV: '6', pints: 124, id: v4()},
+        {name: "Beer", brand: "Good Beer", price: '85', ABV: '6', pints: 3, id: v4()},
         {name: "Ale", brand: "Good Ale", price: '75', ABV: '7', pints: 124, id: v4()},
         {name: "Lager", brand: "Good Lager", price: '80', ABV: '4', pints: 124, id: v4()},
       ],
