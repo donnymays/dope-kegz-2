@@ -33,9 +33,15 @@ describe ('dope kegz actions', () => {
     });
   });
 
-  it('toggleForm should create TOGGLE_FORM action', () => {
-    expect(actions.toggleForm()).toEqual({
-      type: a.TOGGLE_FORM
+  it('toggleForm should create TOGGLE_EDIT_FORM action', () => {
+    expect(actions.toggleEditForm()).toEqual({
+      type: a.TOGGLE_EDIT_FORM
+    });
+  });
+  
+  it('toggleForm should create TOGGLE_NEW_FORM action', () => {
+    expect(actions.toggleNewForm()).toEqual({
+      type: a.TOGGLE_NEW_FORM
     });
   });
 

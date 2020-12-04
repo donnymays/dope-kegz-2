@@ -43,13 +43,8 @@ class KegControl extends React.Component {
 
   handleEditClick = (id) => {
     const { dispatch } = this.props;
-    if (this.props.selectedKeg === null) {
-      const kegToEdit = this.props.masterKegList[id];
-      dispatch(a.selectKeg(kegToEdit));
-    } else {
-      dispatch(a.deselectKeg())
-    }
-    dispatch(a.toggleEditForm())
+    const action = a.toggleEditForm();
+    dispatch(action);
   }
 
   handleEditingKegInList = (kegToEdit) => {
@@ -59,14 +54,11 @@ class KegControl extends React.Component {
     dispatch(a.toggleEditForm());
   }
 
-  // handlePouringAPint = (kegToPourFrom) => {
-  //   const editedMasterKegList = this.state.masterKegList.filter(keg => keg.id !== this.state.selectedKeg.id).concat(kegToPourFrom);
-  //   this.setState({ 
-  //     masterKegList: editedMasterKegList,
-  //     selectedKeg: kegToPourFrom
-  //   });
-  //   console.log(kegToPourFrom.pints)
-  // }
+  handlePouringAPint = (kegToPourFrom) => {
+    const { dispatch } = this.props;
+    dispatch(a.addKeg(kegToPourFrom));
+    dispatch(a.selectKeg(kegToPourFrom));
+  }
 
   render(){
     let currentlyVisibleState = null;

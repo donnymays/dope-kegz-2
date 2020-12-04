@@ -7,8 +7,7 @@ function EditKegForm (props) {
   const { keg, onEditKeg } = props;
   function handleEditKegFormSubmission(event) {
     event.preventDefault();
-    onEditKeg({name: event.target.name.value, brand: event.target.brand.value, price: event.target.price.value, abv: event.target.abv.value, pints: event.target.pints.value, id: keg.id})
-    console.log("yo")
+    onEditKeg({name: event.target.name.value, brand: event.target.brand.value, price: event.target.price.value, abv: event.target.abv.value, pints: parseInt(event.target.pints.value), id: keg.id})
   }
   return (
     <React.Fragment>
