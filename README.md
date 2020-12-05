@@ -1,6 +1,6 @@
 # _Dope Kegz_
 
-_11 November 2020_
+_created: 11 November 2020 last updated: 4 December 2020_
 
 #### _Application that will allow a user to track keg invnetory_
 
@@ -14,6 +14,8 @@ _11 November 2020_
 
 
 ## Description
+_This project was refactored to use Redux for week 3 independent project_
+
 _This is a project for Week 2 of the React block of Epicodus.  Prompt can be seen below._
 
 _The original instructions for the assignment include:_

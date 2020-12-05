@@ -3,7 +3,7 @@ import Keg from "./Keg";
 import PropTypes from "prop-types";
 
 function KegList(props){
-  const { kegList, onKegSelection } = props
+  const { onKegSelection } = props
   return (
     <React.Fragment>
       <hr/>
@@ -12,7 +12,6 @@ function KegList(props){
           whenKegClicked = { onKegSelection }
           name = {keg.name}
           brand = {keg.brand}
-          type = {keg.type}
           price = {keg.price}
           abv = {keg.abv}
           pints = {keg.pints}

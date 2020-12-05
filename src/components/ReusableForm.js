@@ -15,12 +15,6 @@ function ReusableForm(props) {
           name='brand'
           placeholder='Brand'
           defaultValue = {props.brand ? props.brand : ""} />
-        <select name='type'>
-          <option value="paleAle">Pale Ale</option>
-          <option value="amber">Amber</option>
-          <option value="stout">Stout</option>
-          <option value="lager">Lager</option>
-        </select>
         <input 
           type='text'
           name='price'
